@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useAppStore } from '../store';
 import { Search } from 'lucide-react';
 
