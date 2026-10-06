@@ -3,9 +3,9 @@ import { Shield, Activity, Inbox, FileText, Settings, Users, BarChart3, Box, Zap
 
 const navItems = [
   { path: '/', label: 'Mission Control', icon: Activity },
-  { path: '/verify', label: 'Verify Action', icon: Zap, badge: 'New', badgeColor: 'bg-brand-blue text-white' },
+  { path: '/verify', label: 'Verify Action', icon: Zap, badge: 'New', badgeColor: 'bg-brand-blue text-text-primary' },
   { path: '/lab', label: 'Attack Lab', icon: Shield },
-  { path: '/review', label: 'Human Review', icon: Inbox, badge: '4', badgeColor: 'bg-brand-blue text-white rounded-full px-2' },
+  { path: '/review', label: 'Human Review', icon: Inbox, badge: '4', badgeColor: 'bg-brand-blue text-text-primary rounded-full px-2' },
   { path: '/audit', label: 'Audit & Explainability', icon: FileText },
   { path: '/policies', label: 'Policy Studio', icon: Settings },
   { path: '/agents', label: 'Agent Registry', icon: Users },
@@ -26,7 +26,7 @@ export default function Sidebar() {
           <Shield className="w-5 h-5 text-brand-blue" fill="currentColor" />
         </div>
         <div>
-          <h1 className="font-heading font-bold text-xl text-white tracking-wide">VERITAS</h1>
+          <h1 className="font-heading font-bold text-xl text-text-primary tracking-wide">VERITAS</h1>
           <p className="text-[10px] text-text-muted uppercase tracking-wider font-semibold">Verify Before AI Acts.</p>
         </div>
       </div>
@@ -39,8 +39,8 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-md transition-all duration-200 ${
                 isActive
-                  ? 'bg-brand-blue text-white shadow-soft'
-                  : 'text-text-secondary hover:bg-surface-hover hover:text-white'
+                  ? 'bg-brand-blue text-text-primary shadow-soft'
+                  : 'text-text-secondary hover:bg-surface-hover hover:text-text-primary'
               }`
             }
           >
@@ -63,8 +63,8 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `flex items-center justify-between px-3 py-2.5 rounded-md transition-all duration-200 ${
                 isActive
-                  ? 'bg-brand-blue text-white shadow-soft'
-                  : 'text-text-secondary hover:bg-surface-hover hover:text-white'
+                  ? 'bg-brand-blue text-text-primary shadow-soft'
+                  : 'text-text-secondary hover:bg-surface-hover hover:text-text-primary'
               }`
             }
           >
@@ -94,7 +94,7 @@ export default function Sidebar() {
              <Shield className="w-3.5 h-3.5 text-brand-blue" fill="currentColor" />
           </div>
           <div>
-             <h4 className="font-heading font-bold text-sm text-white tracking-wide">VERITAS</h4>
+             <h4 className="font-heading font-bold text-sm text-text-primary tracking-wide">VERITAS</h4>
              <p className="text-[10px] text-text-muted mt-1 leading-tight">From autonomous execution to verified execution.</p>
           </div>
         </div>

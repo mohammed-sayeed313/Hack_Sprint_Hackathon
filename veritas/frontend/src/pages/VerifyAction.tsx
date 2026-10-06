@@ -84,7 +84,7 @@ export default function VerifyAction() {
       {/* Header */}
       <div className="flex justify-between items-center bg-surface border border-border p-4 rounded-card shadow-soft">
         <div>
-           <h1 className="text-2xl font-heading font-bold text-white tracking-tight">VERIFY ACTION</h1>
+           <h1 className="text-2xl font-heading font-bold text-text-primary tracking-tight">VERIFY ACTION</h1>
            <p className="text-text-secondary text-sm">Independently verify an AI agent's proposed action before execution.</p>
         </div>
         <div className="flex items-center text-decision-allow text-xs px-3 py-1.5 bg-decision-allow/10 rounded-full border border-decision-allow/20 font-bold uppercase tracking-wide">
@@ -96,8 +96,8 @@ export default function VerifyAction() {
       {/* Demo Scenarios */}
       <div className="flex space-x-2 pb-2 overflow-x-auto">
         <span className="text-xs font-semibold text-text-muted self-center mr-2 uppercase">Demo Scenarios:</span>
-        <button onClick={() => loadScenario('SAFE')} className="text-xs px-3 py-1.5 border border-border rounded bg-surface-raised hover:bg-surface-hover text-white">Safe Scenario</button>
-        <button onClick={() => loadScenario('INJECTION')} className="text-xs px-3 py-1.5 border border-border rounded bg-surface-raised hover:bg-surface-hover text-white">Prompt Injection</button>
+        <button onClick={() => loadScenario('SAFE')} className="text-xs px-3 py-1.5 border border-border rounded bg-surface-raised hover:bg-surface-hover text-text-primary">Safe Scenario</button>
+        <button onClick={() => loadScenario('INJECTION')} className="text-xs px-3 py-1.5 border border-border rounded bg-surface-raised hover:bg-surface-hover text-text-primary">Prompt Injection</button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -105,17 +105,17 @@ export default function VerifyAction() {
         <div className="lg:col-span-1 space-y-4">
           <div className="bg-surface rounded-card border border-border shadow-soft flex flex-col h-full">
             <div className="p-4 border-b border-border bg-surface-raised rounded-t-card">
-              <h2 className="font-heading font-semibold text-white text-sm">ACTION INPUT</h2>
+              <h2 className="font-heading font-semibold text-text-primary text-sm">ACTION INPUT</h2>
             </div>
             <div className="p-4 space-y-4 flex-1 overflow-y-auto text-sm">
               <div>
                 <label className="block text-xs font-semibold text-text-muted uppercase mb-1">User Intent</label>
-                <textarea className="w-full bg-surface-raised border border-border rounded p-2 text-white h-20 text-xs" value={formData.user_intent} onChange={e => setFormData({...formData, user_intent: e.target.value})} />
+                <textarea className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary h-20 text-xs" value={formData.user_intent} onChange={e => setFormData({...formData, user_intent: e.target.value})} />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Agent</label>
-                  <select className="w-full bg-surface-raised border border-border rounded p-2 text-white text-xs" value={formData.agent} onChange={e => setFormData({...formData, agent: e.target.value})}>
+                  <select className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary text-xs" value={formData.agent} onChange={e => setFormData({...formData, agent: e.target.value})}>
                     <option>ResearchAgent</option>
                     <option>FinanceAgent</option>
                     <option>DevOpsAgent</option>
@@ -123,27 +123,27 @@ export default function VerifyAction() {
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Proposed Tool</label>
-                  <input className="w-full bg-surface-raised border border-border rounded p-2 text-white text-xs font-mono" value={formData.tool} onChange={e => setFormData({...formData, tool: e.target.value})} />
+                  <input className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary text-xs font-mono" value={formData.tool} onChange={e => setFormData({...formData, tool: e.target.value})} />
                 </div>
               </div>
               <div>
                 <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Arguments (JSON)</label>
-                <textarea className="w-full bg-surface-raised border border-border rounded p-2 text-white font-mono text-xs h-24" value={formData.arguments} onChange={e => setFormData({...formData, arguments: e.target.value})} />
+                <textarea className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary font-mono text-xs h-24" value={formData.arguments} onChange={e => setFormData({...formData, arguments: e.target.value})} />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Evidence</label>
-                  <input className="w-full bg-surface-raised border border-border rounded p-2 text-white text-xs" value={formData.evidence} onChange={e => setFormData({...formData, evidence: e.target.value})} />
+                  <input className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary text-xs" value={formData.evidence} onChange={e => setFormData({...formData, evidence: e.target.value})} />
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Destination</label>
-                  <input className="w-full bg-surface-raised border border-border rounded p-2 text-white text-xs" value={formData.destination} onChange={e => setFormData({...formData, destination: e.target.value})} />
+                  <input className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary text-xs" value={formData.destination} onChange={e => setFormData({...formData, destination: e.target.value})} />
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Data Class</label>
-                  <select className="w-full bg-surface-raised border border-border rounded p-2 text-white text-xs" value={formData.data_classification} onChange={e => setFormData({...formData, data_classification: e.target.value})}>
+                  <select className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary text-xs" value={formData.data_classification} onChange={e => setFormData({...formData, data_classification: e.target.value})}>
                     <option>PUBLIC</option>
                     <option>INTERNAL</option>
                     <option>CONFIDENTIAL</option>
@@ -153,7 +153,7 @@ export default function VerifyAction() {
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-text-muted uppercase mb-1">Environment</label>
-                  <select className="w-full bg-surface-raised border border-border rounded p-2 text-white text-xs" value={formData.environment} onChange={e => setFormData({...formData, environment: e.target.value})}>
+                  <select className="w-full bg-surface-raised border border-border rounded p-2 text-text-primary text-xs" value={formData.environment} onChange={e => setFormData({...formData, environment: e.target.value})}>
                     <option>DEVELOPMENT</option>
                     <option>STAGING</option>
                     <option>PRODUCTION</option>
@@ -162,7 +162,7 @@ export default function VerifyAction() {
               </div>
             </div>
             <div className="p-4 border-t border-border">
-              <button onClick={handleVerify} disabled={status === 'verifying'} className={`w-full py-3 rounded font-bold text-white uppercase tracking-wide flex justify-center items-center ${status === 'verifying' ? 'bg-brand-blue/50 cursor-not-allowed' : 'bg-brand-blue hover:bg-blue-600'}`}>
+              <button onClick={handleVerify} disabled={status === 'verifying'} className={`w-full py-3 rounded font-bold text-text-primary uppercase tracking-wide flex justify-center items-center ${status === 'verifying' ? 'bg-brand-blue/50 cursor-not-allowed' : 'bg-brand-blue hover:bg-blue-600'}`}>
                 {status === 'verifying' ? <><Activity className="w-4 h-4 mr-2 animate-spin"/> Verifying...</> : 'Verify Action'}
               </button>
             </div>
@@ -173,7 +173,7 @@ export default function VerifyAction() {
         <div className="lg:col-span-1">
            <div className="bg-surface rounded-card border border-border shadow-soft h-full flex flex-col">
               <div className="p-4 border-b border-border bg-surface-raised rounded-t-card">
-                 <h2 className="font-heading font-semibold text-white text-sm">VERIFICATION PIPELINE</h2>
+                 <h2 className="font-heading font-semibold text-text-primary text-sm">VERIFICATION PIPELINE</h2>
               </div>
               <div className="p-6 flex-1">
                  <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-border before:z-0">
@@ -205,7 +205,7 @@ export default function VerifyAction() {
                          <div key={stage} className="relative flex items-center">
                             {icon}
                             <div className="ml-4 bg-surface-raised border border-border rounded px-3 py-1.5 w-full">
-                               <span className={`text-xs font-medium ${state === 'complete' ? 'text-white' : 'text-text-secondary'}`}>{stage}</span>
+                               <span className={`text-xs font-medium ${state === 'complete' ? 'text-text-primary' : 'text-text-secondary'}`}>{stage}</span>
                             </div>
                          </div>
                        )
@@ -219,7 +219,7 @@ export default function VerifyAction() {
         <div className="lg:col-span-1">
            <div className="bg-surface rounded-card border border-border shadow-soft h-full flex flex-col">
               <div className="p-4 border-b border-border bg-surface-raised rounded-t-card">
-                 <h2 className="font-heading font-semibold text-white text-sm">SECURITY RESULT</h2>
+                 <h2 className="font-heading font-semibold text-text-primary text-sm">SECURITY RESULT</h2>
               </div>
               <div className="p-6 flex-1 flex flex-col">
                  
@@ -250,7 +250,7 @@ export default function VerifyAction() {
                         </div>
 
                         <div className="bg-surface-raised rounded border border-border p-4">
-                           <p className="text-xs text-white leading-relaxed">{result.decision.reason}</p>
+                           <p className="text-xs text-text-primary leading-relaxed">{result.decision.reason}</p>
                         </div>
 
                         <div className="border-t border-border pt-4">
@@ -258,12 +258,12 @@ export default function VerifyAction() {
                               <span className="text-xs text-text-secondary uppercase font-semibold">Risk Score</span>
                               <span className={`text-xs font-bold px-2 py-0.5 rounded ${result.risk.level === 'CRITICAL' ? 'bg-decision-block/20 text-decision-block' : 'bg-decision-allow/20 text-decision-allow'}`}>{result.risk.level}</span>
                            </div>
-                           <div className="text-3xl font-heading font-bold text-white tabular-nums mb-4">{result.risk.score}<span className="text-sm text-text-muted">/100</span></div>
+                           <div className="text-3xl font-heading font-bold text-text-primary tabular-nums mb-4">{result.risk.score}<span className="text-sm text-text-muted">/100</span></div>
                            
                            {result.challenger && (
                                <div className="flex justify-between items-center border-t border-border pt-4 mb-2">
                                   <span className="text-xs text-text-secondary uppercase font-semibold">Challenger Status</span>
-                                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-surface-hover text-white">{result.challenger.status}</span>
+                                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-surface-hover text-text-primary">{result.challenger.status}</span>
                                </div>
                            )}
                         </div>

@@ -31,8 +31,8 @@ export default function Audit() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <FileText className="w-8 h-8 text-white" />
-            <h1 className="text-3xl font-heading font-bold text-white tracking-wide">Audit & Explainability</h1>
+            <FileText className="w-8 h-8 text-text-primary" />
+            <h1 className="text-3xl font-heading font-bold text-text-primary tracking-wide">Audit & Explainability</h1>
           </div>
           <p className="text-text-secondary text-sm mb-6 ml-11">
             View detailed audit logs and understand why decisions were made.
@@ -40,13 +40,13 @@ export default function Audit() {
           
           <div className="flex items-center gap-6 border-b border-border ml-11">
             <button className="pb-3 text-sm font-medium text-brand-blue border-b-2 border-brand-blue relative top-[1px]">Audit Logs</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Verification Reports</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Compliance</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Export</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Verification Reports</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Compliance</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Export</button>
           </div>
         </div>
         
-        <button className="flex items-center gap-2 px-4 py-2 border border-border text-text-secondary hover:text-white hover:bg-surface-hover rounded-md text-sm font-medium transition-colors mb-3">
+        <button className="flex items-center gap-2 px-4 py-2 border border-border text-text-secondary hover:text-text-primary hover:bg-surface-hover rounded-md text-sm font-medium transition-colors mb-3">
           <Download className="w-4 h-4" />
           Export Logs
         </button>
@@ -75,7 +75,7 @@ export default function Audit() {
           <input 
             type="text" 
             placeholder="Search audit events..." 
-            className="w-full bg-surface border border-border rounded-md py-2 pl-9 pr-4 text-sm text-white placeholder-text-muted focus:outline-none focus:border-brand-blue/50"
+            className="w-full bg-surface border border-border rounded-md py-2 pl-9 pr-4 text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-brand-blue/50"
           />
         </div>
       </div>
@@ -86,13 +86,13 @@ export default function Audit() {
         {/* Left Column: Audit Events List */}
         <div className="lg:col-span-4 bg-surface-raised border border-border rounded-xl shadow-soft flex flex-col h-full overflow-hidden">
           <div className="p-4 border-b border-border flex items-center justify-between bg-surface/50">
-            <div className="flex items-center gap-2 text-white font-semibold">
+            <div className="flex items-center gap-2 text-text-primary font-semibold">
               <FileText className="w-4 h-4" />
               Audit Events
             </div>
             <div className="flex items-center gap-2 text-xs text-text-secondary">
               Total: 24
-              <RefreshCw className="w-3.5 h-3.5 cursor-pointer hover:text-white" />
+              <RefreshCw className="w-3.5 h-3.5 cursor-pointer hover:text-text-primary" />
             </div>
           </div>
           
@@ -111,7 +111,7 @@ export default function Audit() {
                     <div className={`p-1.5 rounded-full ${event.bg}`}>
                       <event.icon className={`w-4 h-4 ${event.color}`} />
                     </div>
-                    <h4 className={`text-sm font-semibold ${event.active ? 'text-white' : 'text-text-secondary'}`}>{event.title}</h4>
+                    <h4 className={`text-sm font-semibold ${event.active ? 'text-text-primary' : 'text-text-secondary'}`}>{event.title}</h4>
                   </div>
                   <div className="flex flex-col items-end gap-1">
                     <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider ${
@@ -155,7 +155,7 @@ export default function Audit() {
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-1">
-                    <h2 className="text-xl font-bold text-white">Credential Export Attempt</h2>
+                    <h2 className="text-xl font-bold text-text-primary">Credential Export Attempt</h2>
                     <span className="text-[10px] font-bold bg-decision-block/20 text-decision-block px-2 py-0.5 rounded border border-decision-block/30">BLOCKED</span>
                   </div>
                   <div className="text-xs text-text-secondary flex items-center gap-2">
@@ -166,15 +166,15 @@ export default function Audit() {
                 </div>
               </div>
               <div className="flex items-center gap-2 text-xs text-text-muted bg-surface px-2 py-1 rounded border border-border">
-                VRT-2026-000482 <Copy className="w-3.5 h-3.5 cursor-pointer hover:text-white" />
+                VRT-2026-000482 <Copy className="w-3.5 h-3.5 cursor-pointer hover:text-text-primary" />
               </div>
             </div>
 
             <div className="flex items-center gap-6 border-b border-border mt-6">
               <button className="pb-3 text-sm font-medium text-brand-blue border-b-2 border-brand-blue relative top-[1px]">Verification Pipeline</button>
-              <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Details</button>
-              <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Audit Trail</button>
-              <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Execution</button>
+              <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Details</button>
+              <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Audit Trail</button>
+              <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Execution</button>
             </div>
           </div>
 
@@ -195,7 +195,7 @@ export default function Audit() {
                     <div className="flex items-center justify-between mb-1">
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-text-muted font-medium">{step.id}.</span>
-                        <h4 className="text-sm font-semibold text-white group-hover:text-brand-blue transition-colors">{step.name}</h4>
+                        <h4 className="text-sm font-semibold text-text-primary group-hover:text-brand-blue transition-colors">{step.name}</h4>
                         <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${step.badge}`}>{step.status}</span>
                       </div>
                       <span className="text-[10px] text-text-muted">{step.time}</span>
@@ -231,21 +231,21 @@ export default function Audit() {
 
           {/* Risk Score & Checks */}
           <div className="bg-surface-raised border border-border rounded-xl shadow-soft p-5 flex-1 flex flex-col">
-            <h3 className="text-sm font-semibold text-white mb-4">Risk Score</h3>
+            <h3 className="text-sm font-semibold text-text-primary mb-4">Risk Score</h3>
             
             <div className="flex items-center justify-between mb-8">
               <div className="relative w-24 h-12 overflow-hidden flex items-end justify-center">
                 <div className="absolute top-0 w-24 h-24 rounded-full border-[8px] border-surface"></div>
                 <div className="absolute top-0 w-24 h-24 rounded-full border-[8px] border-decision-block border-b-transparent border-r-transparent -rotate-45"></div>
                 <div className="text-center pb-1">
-                  <span className="text-lg font-bold text-white">97</span>
+                  <span className="text-lg font-bold text-text-primary">97</span>
                   <span className="text-xs text-text-secondary">/100</span>
                 </div>
               </div>
               <span className="text-[10px] font-bold bg-decision-block/20 text-decision-block border border-decision-block/30 px-3 py-1 rounded-full">CRITICAL</span>
             </div>
             
-            <h3 className="text-sm font-semibold text-white mb-4">Check Summary</h3>
+            <h3 className="text-sm font-semibold text-text-primary mb-4">Check Summary</h3>
             <div className="space-y-3 mb-auto">
               <div className="flex justify-between items-center text-xs">
                 <div className="flex items-center gap-2 text-text-secondary"><XCircle className="w-3.5 h-3.5 text-decision-block"/> Intent</div>
@@ -303,7 +303,7 @@ export default function Audit() {
             <Shield className="w-4 h-4 text-brand-blue" />
           </div>
           <div>
-            <h4 className="text-sm font-bold text-white tracking-wide">VERITAS Audit & Explainability</h4>
+            <h4 className="text-sm font-bold text-text-primary tracking-wide">VERITAS Audit & Explainability</h4>
             <p className="text-[10px] text-text-secondary">Every decision is logged, traceable and fully explainable.</p>
           </div>
         </div>

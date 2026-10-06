@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useAppStore } from '../store';
-import { Search, Bell, Sun, ChevronDown, User } from 'lucide-react';
+import { Search, Bell, Sun, Moon, ChevronDown, User } from 'lucide-react';
 
 export default function Topbar() {
-  const { role, setRole, setCommandPaletteOpen } = useAppStore();
+  const { role, setRole, setCommandPaletteOpen, theme, toggleTheme } = useAppStore();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -48,12 +48,17 @@ export default function Topbar() {
         </button>
 
         <div className="flex items-center gap-4 ml-2">
-           <button className="relative text-text-muted hover:text-white transition-colors">
+           <button className="relative text-text-muted hover:text-text-primary transition-colors">
               <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-decision-block text-white text-[9px] font-bold rounded-full flex items-center justify-center border border-surface">5</span>
+              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-decision-block text-text-primary text-[9px] font-bold rounded-full flex items-center justify-center border border-surface">5</span>
            </button>
-           <button className="text-text-muted hover:text-white transition-colors">
-              <Sun className="w-5 h-5" />
+           <button 
+             onClick={toggleTheme} 
+             className="text-text-muted hover:text-text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-full p-1"
+             aria-label={theme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+             title={theme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+           >
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
            </button>
         </div>
 
@@ -65,7 +70,7 @@ export default function Topbar() {
              <User className="w-4 h-4" />
           </div>
           <div className="flex flex-col">
-             <span className="text-sm font-semibold text-white leading-tight">Admin</span>
+             <span className="text-sm font-semibold text-text-primary leading-tight">Admin</span>
              <span className="text-[10px] text-text-muted">System Administrator</span>
           </div>
           <ChevronDown className="w-3 h-3 text-text-muted ml-1" />

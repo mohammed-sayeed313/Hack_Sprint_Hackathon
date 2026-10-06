@@ -20,7 +20,7 @@ export default function PolicyStudio() {
             <div className="w-10 h-10 rounded-lg bg-brand-blue/10 border border-brand-blue/30 flex items-center justify-center shadow-glow">
               <Settings className="w-5 h-5 text-brand-blue" />
             </div>
-            <h1 className="text-3xl font-heading font-bold text-white tracking-wide">Policy Studio</h1>
+            <h1 className="text-3xl font-heading font-bold text-text-primary tracking-wide">Policy Studio</h1>
           </div>
           <p className="text-text-secondary text-sm mb-6 ml-14">
             Create, manage and enforce security policies for AI agent actions.
@@ -28,10 +28,10 @@ export default function PolicyStudio() {
           
           <div className="flex items-center gap-6 border-b border-border ml-14">
             <button className="pb-3 text-sm font-medium text-brand-blue border-b-2 border-brand-blue relative top-[1px]">Policy Library</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Create Policy</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Policy Categories</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Policy Templates</button>
-            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-white transition-colors">Policy Analytics</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Create Policy</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Policy Categories</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Policy Templates</button>
+            <button className="pb-3 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">Policy Analytics</button>
           </div>
         </div>
         
@@ -40,7 +40,7 @@ export default function PolicyStudio() {
             <Plus className="w-4 h-4" />
             Create New Policy
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 border border-border text-text-secondary hover:text-white hover:bg-surface-hover rounded-md text-sm font-medium transition-colors">
+          <button className="flex items-center gap-2 px-4 py-2 border border-border text-text-secondary hover:text-text-primary hover:bg-surface-hover rounded-md text-sm font-medium transition-colors">
             <Upload className="w-4 h-4" />
             Import / Export
           </button>
@@ -58,7 +58,7 @@ export default function PolicyStudio() {
               <input 
                 type="text" 
                 placeholder="Search policies..." 
-                className="w-full bg-surface border border-border rounded-md py-2 pl-9 pr-4 text-xs text-white placeholder-text-muted focus:outline-none focus:border-brand-blue/50"
+                className="w-full bg-surface border border-border rounded-md py-2 pl-9 pr-4 text-xs text-text-primary placeholder-text-muted focus:outline-none focus:border-brand-blue/50"
               />
             </div>
             <div className="flex gap-2">
@@ -92,7 +92,7 @@ export default function PolicyStudio() {
                        <ShieldCheck className="w-3.5 h-3.5 text-decision-allow" />}
                     </div>
                     <div>
-                      <h4 className={`text-[13px] font-semibold leading-tight mb-1 ${policy.selected ? 'text-white' : 'text-text-secondary'}`}>{policy.title}</h4>
+                      <h4 className={`text-[13px] font-semibold leading-tight mb-1 ${policy.selected ? 'text-text-primary' : 'text-text-secondary'}`}>{policy.title}</h4>
                       <p className="text-[10px] text-text-muted leading-snug line-clamp-2">{policy.desc}</p>
                     </div>
                   </div>
@@ -119,11 +119,11 @@ export default function PolicyStudio() {
           <div className="p-3 border-t border-border flex items-center justify-between text-xs text-text-secondary bg-surface/50">
              <span>Showing 1-5 of 12 policies</span>
              <div className="flex items-center gap-1">
-                <button className="p-1 hover:text-white"><ChevronLeft className="w-3.5 h-3.5" /></button>
-                <button className="w-6 h-6 rounded bg-brand-blue text-white flex items-center justify-center">1</button>
+                <button className="p-1 hover:text-text-primary"><ChevronLeft className="w-3.5 h-3.5" /></button>
+                <button className="w-6 h-6 rounded bg-brand-blue text-text-primary flex items-center justify-center">1</button>
                 <button className="w-6 h-6 rounded hover:bg-surface-hover flex items-center justify-center">2</button>
                 <button className="w-6 h-6 rounded hover:bg-surface-hover flex items-center justify-center">3</button>
-                <button className="p-1 hover:text-white"><ChevronRight className="w-3.5 h-3.5" /></button>
+                <button className="p-1 hover:text-text-primary"><ChevronRight className="w-3.5 h-3.5" /></button>
              </div>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function PolicyStudio() {
           <div className="bg-surface-raised border border-border rounded-xl shadow-soft p-5">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h2 className="text-lg font-semibold text-white">Edit Policy</h2>
+                <h2 className="text-lg font-semibold text-text-primary">Edit Policy</h2>
                 <p className="text-xs text-text-secondary">Configure policy rules, conditions and actions.</p>
               </div>
               <div className="flex items-center gap-3">
@@ -152,12 +152,12 @@ export default function PolicyStudio() {
             <div className="grid grid-cols-12 gap-4 mb-4">
               <div className="col-span-6 space-y-1.5">
                  <label className="text-xs font-medium text-text-secondary">Policy Name <span className="text-decision-block">*</span></label>
-                 <input type="text" defaultValue="PII External Destination Deny" className="w-full bg-surface border border-border rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-blue/50" />
+                 <input type="text" defaultValue="PII External Destination Deny" className="w-full bg-surface border border-border rounded-md px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-brand-blue/50" />
               </div>
               <div className="col-span-3 space-y-1.5">
                  <label className="text-xs font-medium text-text-secondary">Category <span className="text-decision-block">*</span></label>
                  <div className="w-full bg-surface border border-border rounded-md px-3 py-2 flex items-center justify-between cursor-pointer">
-                    <span className="text-sm text-white">Data Protection</span>
+                    <span className="text-sm text-text-primary">Data Protection</span>
                     <ChevronDown className="w-4 h-4 text-text-muted" />
                  </div>
               </div>
@@ -166,7 +166,7 @@ export default function PolicyStudio() {
                  <div className="w-full bg-surface border border-border rounded-md px-3 py-2 flex items-center justify-between cursor-pointer">
                     <div className="flex items-center gap-2">
                        <ShieldBan className="w-3.5 h-3.5 text-decision-block" />
-                       <span className="text-sm text-white">Critical</span>
+                       <span className="text-sm text-text-primary">Critical</span>
                     </div>
                     <ChevronDown className="w-4 h-4 text-text-muted" />
                  </div>
@@ -175,7 +175,7 @@ export default function PolicyStudio() {
             
             <div className="space-y-1.5">
                <label className="text-xs font-medium text-text-secondary">Description</label>
-               <textarea rows={3} defaultValue="Blocks actions that attempt to send personally identifiable information (PII) to external destinations." className="w-full bg-surface border border-border rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-blue/50 resize-none"></textarea>
+               <textarea rows={3} defaultValue="Blocks actions that attempt to send personally identifiable information (PII) to external destinations." className="w-full bg-surface border border-border rounded-md px-3 py-2 text-sm text-text-primary focus:outline-none focus:border-brand-blue/50 resize-none"></textarea>
                <div className="flex justify-end text-[10px] text-text-muted">114/500</div>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function PolicyStudio() {
           <div className="bg-surface-raised border border-border rounded-xl shadow-soft p-5">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <h3 className="text-sm font-semibold text-white">Rule Conditions</h3>
+                <h3 className="text-sm font-semibold text-text-primary">Rule Conditions</h3>
                 <p className="text-[11px] text-text-secondary">Define when this policy should be triggered.</p>
               </div>
               <button className="flex items-center gap-1.5 px-3 py-1.5 bg-brand-blue/10 hover:bg-brand-blue/20 text-brand-blue border border-brand-blue/30 rounded text-xs font-medium transition-colors">
@@ -199,13 +199,13 @@ export default function PolicyStudio() {
                  { field: 'Action Type', op: 'equals', val: 'send_email, export_data' }
                ].map((cond, i) => (
                  <div key={i} className="flex gap-3 items-center group">
-                    <div className="flex-1 bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-white">
+                    <div className="flex-1 bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-text-primary">
                       {cond.field} <ChevronDown className="w-3.5 h-3.5 text-text-muted" />
                     </div>
-                    <div className="w-24 bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-white">
+                    <div className="w-24 bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-text-primary">
                       {cond.op} <ChevronDown className="w-3.5 h-3.5 text-text-muted" />
                     </div>
-                    <div className="flex-[1.5] bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-white">
+                    <div className="flex-[1.5] bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-text-primary">
                       {cond.val} <X className="w-3.5 h-3.5 text-text-muted hover:text-decision-block cursor-pointer" />
                     </div>
                  </div>
@@ -216,7 +216,7 @@ export default function PolicyStudio() {
           {/* Policy Action */}
           <div className="bg-surface-raised border border-border rounded-xl shadow-soft p-5">
              <div className="mb-4">
-                <h3 className="text-sm font-semibold text-white">Policy Action</h3>
+                <h3 className="text-sm font-semibold text-text-primary">Policy Action</h3>
                 <p className="text-[11px] text-text-secondary">What should happen when the policy is triggered?</p>
              </div>
 
@@ -226,7 +226,7 @@ export default function PolicyStudio() {
                    <div>
                       <div className="flex items-center gap-2 mb-1">
                          <ShieldBan className="w-4 h-4 text-decision-block" />
-                         <span className="text-sm font-semibold text-white">Block Action</span>
+                         <span className="text-sm font-semibold text-text-primary">Block Action</span>
                       </div>
                       <p className="text-xs text-text-secondary">Immediately prevent the action from executing.</p>
                    </div>
@@ -236,14 +236,14 @@ export default function PolicyStudio() {
                    <div className="flex items-start gap-3 p-3 rounded-lg border border-border bg-surface hover:border-brand-blue/30 cursor-pointer">
                       <div className="mt-1 w-4 h-4 rounded-full border-2 border-text-muted"></div>
                       <div>
-                         <span className="text-sm font-medium text-white block mb-1">Require Human Review</span>
+                         <span className="text-sm font-medium text-text-primary block mb-1">Require Human Review</span>
                          <p className="text-[10px] text-text-secondary">Send to human for approval.</p>
                       </div>
                    </div>
                    <div className="flex items-start gap-3 p-3 rounded-lg border border-border bg-surface hover:border-brand-blue/30 cursor-pointer">
                       <div className="mt-1 w-4 h-4 rounded-full border-2 border-text-muted"></div>
                       <div>
-                         <span className="text-sm font-medium text-white block mb-1">Log Only</span>
+                         <span className="text-sm font-medium text-text-primary block mb-1">Log Only</span>
                          <p className="text-[10px] text-text-secondary">Allow but log the event.</p>
                       </div>
                    </div>
@@ -267,7 +267,7 @@ export default function PolicyStudio() {
               <div className="flex items-center justify-between mb-4">
                  <div className="flex items-center gap-2">
                     <Beaker className="w-4 h-4 text-brand-blue" />
-                    <h3 className="text-sm font-semibold text-white">Policy Testing</h3>
+                    <h3 className="text-sm font-semibold text-text-primary">Policy Testing</h3>
                  </div>
                  <button className="px-3 py-1 bg-brand-blue hover:bg-brand-blue-hover text-white rounded text-xs font-medium transition-colors shadow-glow">
                     Run Test
@@ -277,7 +277,7 @@ export default function PolicyStudio() {
               
               <div className="space-y-1.5 mb-4">
                  <label className="text-[11px] font-medium text-text-secondary">Test Data</label>
-                 <div className="w-full bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-white cursor-pointer">
+                 <div className="w-full bg-surface border border-border rounded px-3 py-2 flex items-center justify-between text-xs text-text-primary cursor-pointer">
                     Sample PII Email Export <ChevronDown className="w-3.5 h-3.5 text-text-muted" />
                  </div>
               </div>
@@ -301,28 +301,28 @@ export default function PolicyStudio() {
            <div className="bg-surface-raised border border-border rounded-xl shadow-soft p-5">
               <div className="flex items-center gap-2 mb-6">
                  <BarChart3 className="w-4 h-4 text-brand-blue" />
-                 <h3 className="text-sm font-semibold text-white">Policy Usage</h3>
+                 <h3 className="text-sm font-semibold text-text-primary">Policy Usage</h3>
               </div>
 
               <div className="grid grid-cols-2 gap-y-6 gap-x-4">
                  <div>
                     <div className="text-[11px] text-text-secondary mb-1">Total Evaluations</div>
-                    <div className="text-xl font-bold text-white">1,248</div>
+                    <div className="text-xl font-bold text-text-primary">1,248</div>
                     <div className="text-[10px] text-emerald-500 font-medium flex items-center mt-1">↑ 12%</div>
                  </div>
                  <div className="text-right">
                     <div className="text-[11px] text-text-secondary mb-1">Blocked Actions</div>
-                    <div className="text-xl font-bold text-white">312</div>
+                    <div className="text-xl font-bold text-text-primary">312</div>
                     <div className="text-[10px] text-decision-block font-medium flex items-center justify-end mt-1">↑ 8%</div>
                  </div>
                  <div>
                     <div className="text-[11px] text-text-secondary mb-1">Review Actions</div>
-                    <div className="text-xl font-bold text-white">46</div>
+                    <div className="text-xl font-bold text-text-primary">46</div>
                     <div className="text-[10px] text-decision-review font-medium flex items-center mt-1">↑ 3%</div>
                  </div>
                  <div className="text-right">
                     <div className="text-[11px] text-text-secondary mb-1">Allowed Actions</div>
-                    <div className="text-xl font-bold text-white">890</div>
+                    <div className="text-xl font-bold text-text-primary">890</div>
                     <div className="text-[10px] text-emerald-500 font-medium flex items-center justify-end mt-1">↑ 10%</div>
                  </div>
               </div>
@@ -333,7 +333,7 @@ export default function PolicyStudio() {
               <div className="flex items-center justify-between mb-4">
                  <div className="flex items-center gap-2">
                     <Link2 className="w-4 h-4 text-brand-blue" />
-                    <h3 className="text-sm font-semibold text-white">Related Policies</h3>
+                    <h3 className="text-sm font-semibold text-text-primary">Related Policies</h3>
                  </div>
                  <span className="text-[11px] text-brand-blue hover:underline cursor-pointer">View All</span>
               </div>
@@ -342,28 +342,28 @@ export default function PolicyStudio() {
                  <div className="flex justify-between items-center bg-surface border border-border rounded p-2 text-xs">
                     <div className="flex items-center gap-2">
                        <ShieldBan className="w-3.5 h-3.5 text-decision-block" />
-                       <span className="text-text-secondary hover:text-white cursor-pointer truncate max-w-[140px]">Credential Exfiltration Deny</span>
+                       <span className="text-text-secondary hover:text-text-primary cursor-pointer truncate max-w-[140px]">Credential Exfiltration Deny</span>
                     </div>
                     <span className="text-[9px] font-bold bg-decision-block/10 text-decision-block border border-decision-block/20 px-1.5 py-0.5 rounded">CRITICAL</span>
                  </div>
                  <div className="flex justify-between items-center bg-surface border border-border rounded p-2 text-xs">
                     <div className="flex items-center gap-2">
                        <ShieldBan className="w-3.5 h-3.5 text-decision-block" />
-                       <span className="text-text-secondary hover:text-white cursor-pointer truncate max-w-[140px]">Sensitive Data Export Deny</span>
+                       <span className="text-text-secondary hover:text-text-primary cursor-pointer truncate max-w-[140px]">Sensitive Data Export Deny</span>
                     </div>
                     <span className="text-[9px] font-bold bg-decision-block/10 text-decision-block border border-decision-block/20 px-1.5 py-0.5 rounded">CRITICAL</span>
                  </div>
                  <div className="flex justify-between items-center bg-surface border border-border rounded p-2 text-xs">
                     <div className="flex items-center gap-2">
                        <ShieldAlert className="w-3.5 h-3.5 text-decision-review" />
-                       <span className="text-text-secondary hover:text-white cursor-pointer truncate max-w-[140px]">External API Restriction</span>
+                       <span className="text-text-secondary hover:text-text-primary cursor-pointer truncate max-w-[140px]">External API Restriction</span>
                     </div>
                     <span className="text-[9px] font-bold bg-decision-review/10 text-decision-review border border-decision-review/20 px-1.5 py-0.5 rounded">MEDIUM</span>
                  </div>
                  <div className="flex justify-between items-center bg-surface border border-border rounded p-2 text-xs">
                     <div className="flex items-center gap-2">
                        <ShieldAlert className="w-3.5 h-3.5 text-decision-review" />
-                       <span className="text-text-secondary hover:text-white cursor-pointer truncate max-w-[140px]">Unknown Tool Deny</span>
+                       <span className="text-text-secondary hover:text-text-primary cursor-pointer truncate max-w-[140px]">Unknown Tool Deny</span>
                     </div>
                     <span className="text-[9px] font-bold bg-decision-review/10 text-decision-review border border-decision-review/20 px-1.5 py-0.5 rounded">HIGH</span>
                  </div>

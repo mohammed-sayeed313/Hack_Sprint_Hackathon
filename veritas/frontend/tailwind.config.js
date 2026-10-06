@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -7,15 +8,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#050E1B',
+        background: 'rgb(var(--color-bg) / <alpha-value>)',
         surface: {
-          DEFAULT: '#0A1A30',
-          raised: '#0D2038',
-          hover: '#132A4A',
+          DEFAULT: 'rgb(var(--color-surface) / <alpha-value>)',
+          raised: 'rgb(var(--color-surface-raised) / <alpha-value>)',
+          hover: 'rgb(var(--color-surface-hover) / <alpha-value>)',
         },
         border: {
-          DEFAULT: '#16314F',
-          trust: 'rgba(34, 211, 238, 0.4)',
+          DEFAULT: 'rgb(var(--color-border) / <alpha-value>)',
+          trust: 'var(--color-border-trust)',
         },
         brand: {
           blue: '#2F6BFF',
@@ -28,9 +29,9 @@ export default {
           block: '#EF4444', // danger red
         },
         text: {
-          primary: '#FFFFFF',
-          secondary: '#9FB0C7',
-          muted: '#6B819A',
+          primary: 'rgb(var(--color-text-primary) / <alpha-value>)',
+          secondary: 'rgb(var(--color-text-secondary) / <alpha-value>)',
+          muted: 'rgb(var(--color-text-muted) / <alpha-value>)',
         }
       },
       fontFamily: {

@@ -5,14 +5,42 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-bg: 248 250 252;
+    --color-surface: 255 255 255;
+    --color-surface-raised: 241 245 249;
+    --color-surface-hover: 226 232 240;
+    --color-border: 226 232 240;
+    --color-border-trust: rgba(34, 211, 238, 0.4);
+    --color-text-primary: 15 23 42;
+    --color-text-secondary: 100 116 139;
+    --color-text-muted: 148 163 184;
+  }
+  
+  .dark {
+    --color-bg: 11 17 32;
+    --color-surface: 21 31 50;
+    --color-surface-raised: 17 24 39;
+    --color-surface-hover: 31 41 55;
+    --color-border: 38 52 73;
+    --color-border-trust: rgba(34, 211, 238, 0.4);
+    --color-text-primary: 248 250 252;
+    --color-text-secondary: 148 163 184;
+    --color-text-muted: 100 116 139;
+  }
+
   body {
-    @apply bg-background text-text-primary font-body antialiased selection:bg-brand-blue selection:text-white;
+    @apply bg-background text-text-primary font-body antialiased selection:bg-brand-blue selection:text-white transition-colors duration-300;
     /* Dot grid */
-    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
     background-size: 24px 24px;
     background-attachment: fixed;
     margin: 0;
     min-height: 100vh;
+  }
+
+  .dark body {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -46,4 +74,22 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Global button transitions */
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:active {
+  transform: scale(0.97);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.4s ease-out forwards;
 }

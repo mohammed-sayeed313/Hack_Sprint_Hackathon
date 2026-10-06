@@ -4,17 +4,17 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, 
 
 const KpiCard = ({ icon: Icon, title, value, delta, pct, color }: any) => (
   <div className="bg-surface rounded-card border border-border p-4 flex flex-col justify-between shadow-soft">
-    <div className="flex items-center space-x-3 mb-2">
-      <div className={`p-2 rounded bg-${color}/10 border border-${color}/20`}>
-        <Icon className={`w-5 h-5 text-${color}`} />
+    <div className="flex justify-between items-start mb-4">
+      <span className="text-text-muted text-xs font-medium uppercase tracking-wider leading-tight">{title}</span>
+      <div className={`p-2 rounded bg-${color}/10 border border-${color}/20 flex-shrink-0 ml-2`}>
+        <Icon className={`w-4 h-4 text-${color}`} />
       </div>
-      <div className="flex flex-col">
-        <span className="text-text-muted text-xs font-medium uppercase tracking-wider">{title}</span>
-        <div className="flex items-baseline space-x-2">
-          <span className="text-3xl font-heading font-semibold text-white tabular-nums">{value}</span>
-          {delta && <span className="text-decision-allow text-xs font-medium flex items-center"><ArrowUpRight className="w-3 h-3 mr-0.5" /> {delta}</span>}
-          {pct && <span className="text-text-muted text-xs">{pct}</span>}
-        </div>
+    </div>
+    <div className="flex flex-col gap-1.5">
+      <span className="text-3xl font-heading font-semibold text-text-primary tabular-nums leading-none">{value}</span>
+      <div className="flex items-center flex-wrap gap-x-2 gap-y-1">
+        {delta && <span className="text-decision-allow text-xs font-medium flex items-center"><ArrowUpRight className="w-3 h-3 mr-0.5 flex-shrink-0" /> {delta}</span>}
+        {pct && <span className="text-text-muted text-xs">{pct}</span>}
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@ const QuickAccessCard = ({ icon: Icon, title, subtitle }: any) => (
           <Icon className="w-4 h-4" />
       </div>
       <div>
-          <h4 className="text-sm text-white font-medium">{title}</h4>
+          <h4 className="text-sm text-text-primary font-medium">{title}</h4>
           <p className="text-[10px] text-text-muted">{subtitle}</p>
       </div>
   </div>
@@ -69,7 +69,7 @@ export default function MissionControl() {
           <button className="bg-brand-blue hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
             <Plus className="w-4 h-4 mr-2" /> Verify Action
           </button>
-          <button className="bg-surface-raised border border-border hover:bg-surface-hover text-white px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
+          <button className="bg-surface-raised border border-border hover:bg-surface-hover text-text-primary px-4 py-2 rounded-md text-sm font-medium flex items-center transition-colors">
             Explore Attack Lab
           </button>
         </div>
@@ -156,7 +156,7 @@ export default function MissionControl() {
             {/* Live Action Monitor */}
             <div className="bg-surface rounded-card border border-border shadow-soft flex flex-col overflow-hidden">
                 <div className="p-3 border-b border-border flex justify-between items-center bg-surface-raised">
-                    <h3 className="font-heading font-semibold text-white flex items-center text-sm">
+                    <h3 className="font-heading font-semibold text-text-primary flex items-center text-sm">
                         <span className="w-1.5 h-4 bg-brand-cyan rounded-full mr-2"></span>
                         Live Action Monitor
                     </h3>
@@ -186,7 +186,7 @@ export default function MissionControl() {
                         <tr key={row.id} className="border-b border-border/50 hover:bg-surface-raised/30">
                             <td className="p-2.5 pl-4">{row.id}</td>
                             <td className="p-2.5">{row.time}</td>
-                            <td className="p-2.5 flex items-center font-body text-white"><Lock className="w-3 h-3 mr-1.5 text-text-muted"/>{row.agent}</td>
+                            <td className="p-2.5 flex items-center font-body text-text-primary"><Lock className="w-3 h-3 mr-1.5 text-text-muted"/>{row.agent}</td>
                             <td className="p-2.5">{row.action}</td>
                             <td className="p-2.5">{row.target}</td>
                             <td className="p-2.5"><span className={`px-1.5 py-0.5 rounded font-bold ${row.risk >= 80 ? 'text-decision-block bg-decision-block/20' : row.risk >= 60 ? 'text-decision-review bg-decision-review/20' : 'text-decision-allow bg-decision-allow/20'}`}>{row.risk}</span></td>
@@ -225,28 +225,28 @@ export default function MissionControl() {
                     <div className="flex space-x-3">
                         <div className="mt-1"><span className="text-[9px] font-bold bg-decision-block/20 text-decision-block px-1 rounded border border-decision-block/30">BLOCKED</span></div>
                         <div>
-                            <p className="text-xs text-white font-medium">Credential export attempt</p>
+                            <p className="text-xs text-text-primary font-medium">Credential export attempt</p>
                             <p className="text-[10px] text-text-muted mt-0.5">14:52 · Research-Agent-03</p>
                         </div>
                     </div>
                     <div className="flex space-x-3">
                         <div className="mt-1"><span className="text-[9px] font-bold bg-decision-review/20 text-decision-review px-1 rounded border border-decision-review/30">REVIEW</span></div>
                         <div>
-                            <p className="text-xs text-white font-medium">Production deployment</p>
+                            <p className="text-xs text-text-primary font-medium">Production deployment</p>
                             <p className="text-[10px] text-text-muted mt-0.5">14:48 · DevOps-Agent-02</p>
                         </div>
                     </div>
                     <div className="flex space-x-3">
                         <div className="mt-1"><span className="text-[9px] font-bold bg-decision-block/20 text-decision-block px-1 rounded border border-decision-block/30">BLOCKED</span></div>
                         <div>
-                            <p className="text-xs text-white font-medium">External data transfer</p>
+                            <p className="text-xs text-text-primary font-medium">External data transfer</p>
                             <p className="text-[10px] text-text-muted mt-0.5">14:45 · Finance-Agent-01</p>
                         </div>
                     </div>
                      <div className="flex space-x-3">
                         <div className="mt-1"><span className="text-[9px] font-bold bg-decision-allow/20 text-decision-allow px-1 rounded border border-decision-allow/30">ALLOWED</span></div>
                         <div>
-                            <p className="text-xs text-white font-medium">File access</p>
+                            <p className="text-xs text-text-primary font-medium">File access</p>
                             <p className="text-[10px] text-text-muted mt-0.5">14:42 · Data-Agent-05</p>
                         </div>
                     </div>
