@@ -7,35 +7,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#050B14',
+        background: '#050E1B',
         surface: {
-          DEFAULT: '#0A1626',
-          raised: '#0E1D31',
-          hover: '#122540',
+          DEFAULT: '#0A1A30',
+          raised: '#0D2038',
+          hover: '#132A4A',
         },
         border: {
-          DEFAULT: '#1B3050',
-          trust: 'rgba(93, 224, 230, 0.6)',
+          DEFAULT: '#16314F',
+          trust: 'rgba(34, 211, 238, 0.4)',
         },
         brand: {
-          navy: '#0B2E4A',
-          teal: '#0F8B8D',
-          cyan: '#5DE0E6',
+          blue: '#2F6BFF',
+          cyan: '#22D3EE',
+          navy: '#07142A',
         },
         decision: {
-          allow: '#3BA0F5',
-          review: '#F2B134',
-          block: '#FF4D5E',
+          allow: '#22C55E', // success green
+          review: '#F5A524', // warning amber
+          block: '#EF4444', // danger red
         },
         text: {
-          primary: '#EAF2FA',
-          secondary: '#9DB1C6',
+          primary: '#FFFFFF',
+          secondary: '#9FB0C7',
           muted: '#6B819A',
         }
       },
       fontFamily: {
-        heading: ['"Space Grotesk"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['Inter', 'Geist', 'sans-serif'],
+        body: ['Inter', 'Geist', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       borderRadius: {

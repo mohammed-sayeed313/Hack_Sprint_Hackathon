@@ -1,0 +1,8 @@
+{
+  "name": "hacksprint-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix veritas/frontend",
+    "install:all": "npm install --prefix veritas/frontend"
+  }
+}
